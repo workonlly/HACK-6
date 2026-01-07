@@ -6,390 +6,150 @@ const ProblemStatements = () => {
   const problemStatements = [
     {
       id: 1,
-      title: 'Mobile Network Packet Analyzer for Kali NetHunter',
+      title: 'Lightweight Mobile Network Traffic Analyzer',
       content: (
         <>
+          <p className="font-bold mb-3">Challenge:</p>
           <p className="mb-4">
-            This feature will be an Android-compatible network packet analysis tool that integrates
-            with Kali NetHunter, allowing penetration testers, network administrators, and
-            cybersecurity professionals to capture, analyze, and filter network packets directly
-            from a mobile device.
+            Design and develop an Android app that captures and visualizes network traffic
+            (Wi-Fi/cellular) in real time without requiring root access. The tool should help users
+            understand what types of data apps are sending/receiving.
           </p>
 
-          <p className="mb-4">
-            This feature will enhance Kali NetHunter by providing a Wireshark-like packet analysis
-            tool for mobile devices. It will allow real-time network monitoring, deep packet
-            inspection (DPI), and anomaly detection while running efficiently on mobile hardware.
-          </p>
+          <p className="font-bold mb-3">Key Features to Implement:</p>
 
-          <p className="font-bold mb-3">Key Capabilities:</p>
-
-          <ol className="list-decimal list-inside space-y-3 mb-4">
-            <li>
-              <strong>Packet Capture & Analysis</strong>
-              <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                <li>
-                  Capture live network traffic from WiFi, mobile data (LTE/5G), and USB tethered
-                  interfaces.
-                </li>
-                <li>Support for TCP, UDP, ICMP, HTTP(S), DNS, and other protocols.</li>
-                <li>
-                  Deep Packet Inspection (DPI) to analyze payloads for malicious activity.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Real-Time Packet Filtering</strong>
-              <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                <li>
-                  Users can filter captured packets based on source IP, destination IP, ports, and
-                  protocols.
-                </li>
-                <li>Apply predefined security filters to detect suspicious traffic</li>
-              </ul>
-            </li>
-          </ol>
+          <ul className="list-disc list-inside space-y-2 mb-4">
+            <li>Capture network flows per app.</li>
+            <li>Display basic protocol info (HTTP, DNS, TCP/UDP).</li>
+            <li>Alert when suspicious traffic patterns (e.g., unknown servers) are observed.</li>
+          </ul>
 
           <p className="font-bold mb-3">Expected Outcome:</p>
 
-          <ul className="list-disc list-inside space-y-2">
-            <li>A standalone Android app module that integrates with Kali NetHunter.</li>
-            <li>A Dashboard to show various real-time traffic and captured data.</li>
-          </ul>
+          <p className="mb-4">
+            A mobile app with UI showing live traffic stats, and a simple report summarizing potential privacy concerns.
+          </p>
         </>
       ),
     },
     {
       id: 2,
-      title: 'Mobile-to-LoRa Communication Without a SIM Card',
+      title: 'Smart SMS/Call Fraud Detector',
       content: (
         <>
+          <p className="font-bold mb-3">Challenge:</p>
           <p className="mb-4">
-            Modern military operations require secure, high-bandwidth, and resilient offline
-            communication systems that can function without SIM cards, Wi-Fi, or satellite
-            networks. Current solutions, such as SINCGARS radios and LoRaWAN, have bandwidth and
-            security limitations, making them vulnerable to jamming and cyberattacks. A robust and
-            secure data transfer system that operates in contested environments is essential for
-            mission success.
+            Modern mobiles are flooded with spam messages, phishing SMS, and fraudulent calls.
+            Build a mobile solution that monitors incoming SMS and call metadata to detect
+            potential fraud using rule-based + lightweight ML techniques.
           </p>
 
-          <p className="font-bold mb-3">Detailed Description:</p>
+          <p className="font-bold mb-3">Key Features to Implement:</p>
 
-          <p className="mb-4">
-            The goal is to develop a highly secure, offline data transfer system that can
-            facilitate communication in jamming-prone and network-denied environments while
-            ensuring zero leakage of personnel details such as location, identity, or
-            mission-critical data. The system should include:
-          </p>
-
-          <p className="font-bold mb-3">Key Capabilities:</p>
-
-          <ol className="list-decimal list-inside space-y-3 mb-4">
-            <li>
-              <strong>Direct Bluetooth or Wi-Fi (ESP32) to LoRa Communication</strong>
-              <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                <li>
-                  The mobile device communicates with the ESP32-LoRa module using Bluetooth (BLE)
-                  or Wi-Fi (ESP-Now/SoftAP).
-                </li>
-                <li>
-                  The ESP32-LoRa module acts as a gateway, taking the message from the mobile and
-                  transmitting it over LoRa to another LoRa device.
-                </li>
-                <li>
-                  On the receiving end, another ESP32-LoRa node decodes the message and forwards it
-                  to a connected mobile device.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Communication Methods</strong>
-              <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                <li>
-                  Mobile App → Bluetooth/Wi-Fi → ESP32-LoRa → LoRa Network → ESP32-LoRa →
-                  Receiving Mobile
-                </li>
-                <li>Encrypted Text Messaging, Alerts, and GPS Location Sharing</li>
-              </ul>
-            </li>
-          </ol>
-
-          <p className="font-bold mb-3">Expected Outcomes:</p>
-
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              A fully functional secure offline data transfer system capable of operating without
-              SIM cards and Wi-Fi ensuring robust communication for military operations in
-              network-denied environments while guaranteeing no personnel data or location leakage.
-            </li>
+          <ul className="list-disc list-inside space-y-2 mb-4">
+            <li>Parse and classify SMS/call logs.</li>
+            <li>Detect phishing/scam patterns (keyword matching, sender anomalies).</li>
+            <li>Provide user warnings and safe action suggestions.</li>
           </ul>
+
+          <p className="font-bold mb-3">Expected Outcome:</p>
+
+          <p className="mb-4">
+            An Android proof-of-concept app that flags scam messages/calls with category labels
+            (e.g., "Phishing", "Spam", "Unknown") and history logging.
+          </p>
         </>
       ),
     },
     {
       id: 3,
-      title: 'Self-Sovereign Identity (SSI) Mobile App',
+      title: 'Mobile App Vulnerability Scanner',
       content: (
         <>
-          <p className="font-bold mb-3">Background:</p>
-
+          <p className="font-bold mb-3">Challenge:</p>
           <p className="mb-4">
-            Traditional identity management systems rely on centralized authorities (governments,
-            banks, and corporations) to issue, verify, and store user identities. This leads to
-            several security and privacy risks, such as identity theft, unauthorized access, data
-            breaches, and lack of user control over personal information. Moreover, users are often
-            required to share more personal data than necessary for identity verification (e.g.,
-            sharing an entire ID document to prove age).
+            Create a tool (possibly cross-platform CLI + Android UI) that scans installed apps on an Android
+            device for common security issues like excessive permissions, outdated SDKs,
+            or insecure hardcoded URLs.
           </p>
 
-          <p className="mb-4">
-            Self-Sovereign Identity (SSI) allows users to control and share only necessary identity
-            attributes without relying on third-party intermediaries. The challenge is to develop a
-            mobile application that enables secure, identity verification while maintaining user
-            privacy and control.
-          </p>
-
-          <p className="font-bold mb-3">Objectives:</p>
+          <p className="font-bold mb-3">Key Features to Implement:</p>
 
           <ul className="list-disc list-inside space-y-2 mb-4">
-            <li>
-              Develop a mobile app for Academic Credential Verification that allows users to
-              create, store, and manage student Self-Sovereign Identities (SSI).
-            </li>
-            <li>
-              Implement best possible solution to allow users to prove attributes (e.g., course
-              credentials) without revealing full transcripts.
-            </li>
+            <li>List installed apps with permission summary.</li>
+            <li>Flag potential risky permissions (SMS, contacts, camera, location).</li>
+            <li>Suggest secure alternatives or mitigation.</li>
           </ul>
 
           <p className="font-bold mb-3">Expected Outcome:</p>
 
-          <p className="font-bold mb-2">Mobile Application</p>
-
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              Mobile app for <strong>creating, managing, and sharing DIDs & Verifiable Credentials.</strong>
-            </li>
-            <li>
-              <strong>Secure Authentication System</strong> – Login/authentication without
-              passwords using <strong>DID-based authentication.</strong>
-            </li>
-          </ul>
+          <p className="mb-4">
+            A scanner that outputs a readable security assessment report for installed mobile apps.
+          </p>
         </>
       ),
     },
     {
       id: 4,
-      title: 'Unveiling Vulnerabilities in Google Approved Apps',
+      title: 'Secure Peer-to-Peer Chat Module',
       content: (
         <>
-          <p className="font-bold mb-3">Problem Statement:</p>
-
+          <p className="font-bold mb-3">Challenge:</p>
           <p className="mb-4">
-            Google Play Protect rigorously scans and verifies apps before they are made available
-            to users. However, even with these stringent checks, vulnerabilities and security
-            issues can sometimes slip through the cracks. This hackathon challenges participants to
-            delve deep into the ecosystem of Google-approved applications and uncover potential
-            security flaws, privacy concerns, and functional vulnerabilities.
+            Build a secure mobile chat prototype (can be Android or cross-platform) supporting:
           </p>
+          
+          <ul className="list-disc list-inside space-y-2 mb-4 ml-4">
+            <li>End-to-end encryption (E2EE),</li>
+            <li>Optional self-destructing messages,</li>
+            <li>Basic anonymity (no central server logging).</li>
+          </ul>
 
-          <p className="font-bold mb-3">Objective:</p>
-
-          <p className="mb-4">
-            Participants are tasked with identifying and documenting vulnerabilities, security
-            issues, and potential privacy risks within a selection of Google Play Store approved
-            applications. The goal is to develop tools, techniques, and PoC that can aid in the
-            continuous improvement of app security and user safety.
-          </p>
-
-          <p className="font-bold mb-3">Specific Challenges:</p>
+          <p className="font-bold mb-3">Key Features to Implement:</p>
 
           <ul className="list-disc list-inside space-y-2 mb-4">
-            <li>Vulnerability Discovery</li>
-            <li>Privacy Analysis</li>
-            <li>Functional Issues and Exploits</li>
+            <li>E2EE using well-known libraries (e.g., libsodium / Signal9X protocols).</li>
+            <li>Timer-based auto deletion of messages from both devices.</li>
+            <li>Minimal UI for chatting.</li>
           </ul>
 
           <p className="font-bold mb-3">Expected Outcome:</p>
 
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              A detailed report outlining the discovered vulnerabilities, privacy concerns, and
-              functional issues in google approved and authentic apps. The target apps would be
-              Banking apps, mParivahan, DigiYatra, UMANG, eshram, DigiLocker, COWIN, esanjeevani,
-              ABHA and similar apps.
-            </li>
-            <li>Tools or scripts developed for vulnerability analysis.</li>
-          </ul>
+          <p className="mb-4">
+            A working mobile chat app where messages are encrypted and can auto-expire securely after a timeout.
+          </p>
         </>
       ),
     },
     {
       id: 5,
-      title: 'Fraud and Phishing Detection Mobile Application',
+      title: 'Privacy Guardian for Mobile Sensor & App Usage',
       content: (
         <>
-          <p className="font-bold mb-3">Problem Statement:</p>
-
+          <p className="font-bold mb-3">Challenge:</p>
           <p className="mb-4">
-            The digital landscape is increasingly plagued by sophisticated fraud tactics, ranging
-            from deceptive messages and spam calls to malicious app notifications and manipulative
-            advertisements. These attacks erode user trust, compromise personal data, and inflict
-            financial losses. This hackathon challenges participants to develop innovative
-            solutions for detecting, preventing, and mitigating fraud across various digital
-            communication channels.
+            Build a mobile utility that:
           </p>
+          
+          <ul className="list-disc list-inside space-y-2 mb-4 ml-4">
+            <li>Tracks sensor permissions usage (microphone, camera, GPS) per app,</li>
+            <li>Logs suspicious on-device activity,</li>
+            <li>Alerts the user when an app uses a sensitive sensor in the background.</li>
+          </ul>
 
-          <p className="font-bold mb-3">Objective:</p>
-
-          <p className="mb-4">
-            Participants will design and implement systems that can effectively identify and
-            counteract fraudulent activities within the scope of messages (SMS, instant messaging),
-            calls (voice, VoIP), app notifications, advertisements, and spam. Though{' '}
-            <strong>rooting an Android device is not necessarily required</strong> to execute these
-            tasks. However, the approach depends on the level of access and data analysis required.
-            The focus is on building robust and adaptable solutions that can stay ahead of evolving
-            fraud techniques.
-          </p>
-
-          <p className="font-bold mb-3">Specific Challenges:</p>
+          <p className="font-bold mb-3">Key Features to Implement:</p>
 
           <ul className="list-disc list-inside space-y-2 mb-4">
-            <li>
-              <strong>Message Fraud Detection</strong>
-            </li>
-            <li>
-              <strong>Call Fraud Detection</strong>
-            </li>
-            <li>
-              <strong>App Notification Fraud</strong>
-            </li>
-            <li>
-              <strong>Advertisement Fraud</strong>
-            </li>
-            <li>
-              <strong>Email filters</strong>
-            </li>
-            <li>
-              <strong>Link Analysis</strong>
-            </li>
+            <li>Background service to monitor sensor accesses.</li>
+            <li>Alerts/notifications when unexpected access happens.</li>
+            <li>Permissions audit and recommendations.</li>
           </ul>
 
           <p className="font-bold mb-3">Expected Outcome:</p>
 
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              A working prototype or proof-of-concept demonstrating the developed anti-fraud
-              solution.
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      id: 6,
-      title:
-        'Secure Military Messaging App with End-to-End Encryption & Self-Destructing Messages',
-      content: (
-        <>
-          <p className="font-bold mb-3">Problem Statement:</p>
-
           <p className="mb-4">
-            Military personnel require highly secure and private communication channels for
-            mission-critical operations. However, existing messaging apps are vulnerable to
-            interception, metadata leaks, and forensic recovery, posing significant national
-            security risks. Even encrypted messaging platforms can leak metadata, allowing
-            adversaries to analyze communication patterns and identify sensitive mission details.
+            A privacy-monitoring app with dashboard summarizing sensor usage trends and alerts.
           </p>
-
-          <p className="mb-4">
-            The challenge is to develop a military-grade, metadata-resistant messaging application
-            that ensures encryption, self-destructing messages.
-          </p>
-
-          <p className="font-bold mb-3">Objectives:</p>
-
-          <ul className="list-disc list-inside space-y-2 mb-4">
-            <li>Implement Encryption to protect messages.</li>
-            <li>
-              Ensure metadata-resistant communication, preventing adversaries from analyzing
-              sender-receiver relationships.
-            </li>
-            <li>
-              Enable self-destructing messages that leave no digital traces after they are read.
-            </li>
-          </ul>
-
-          <p className="font-bold mb-3">Expected Outcome:</p>
-
-          <ul className="list-disc list-inside space-y-2">
-            <li>Advanced Encryption & Privacy Features.</li>
-            <li>Self-Destructing & Tamper-Proof Messaging.</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      id: 7,
-      title: 'Open-Source Debugging Tool for Android Apps',
-      content: (
-        <>
-          <p className="mb-4">
-            Existing Android debugging tools, both open-source and commercial, have limitations in
-            automation, real-time performance tracking, and integration with modern development
-            workflows. Commercial tools provide advanced features but are often expensive and
-            proprietary, restricting accessibility. There is a need for an advanced open-source
-            debugging tool that surpasses existing solutions by incorporating cutting-edge
-            features, AI-powered automation, and deep system analytics while ensuring seamless
-            integration with Android development environments.
-          </p>
-
-          <p className="font-bold mb-3">Objectives</p>
-
-          <p className="mb-4">
-            The goal is to develop a feature-rich, open-source debugging tool exclusively for
-            Android that provides superior debugging capabilities compared to commercial tools. The
-            solution should include:
-          </p>
-
-          <ul className="list-disc list-inside space-y-2 mb-4">
-            <li>
-              Advanced Debugging & Logging: Real-time log filtering, crash analysis, and event
-              tracing.
-            </li>
-            <li>
-              AI-Powered Issue Detection: Machine learning models to predict, detect, and resolve
-              common bugs automatically.
-            </li>
-            <li>
-              Performance Insights: CPU, memory, and network usage tracking with anomaly detection.
-            </li>
-            <li>
-              Automated Error Resolution: AI-assisted suggestions and auto-fix capabilities for
-              common coding errors.
-            </li>
-            <li>
-              Seamless Integration: Compatibility with Android Studio, Jetpack tools, and CI/CD
-              pipelines.
-            </li>
-            <li>
-              Security & Privacy Focus: Ensure debugging logs and analytics do not expose sensitive
-              user data.
-            </li>
-            <li>
-              Scalability & Extensibility: Allow plugin-based enhancements for future debugging
-              requirements.
-            </li>
-          </ul>
-
-          <p className="font-bold mb-3">Expected Outcome:</p>
-
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              A fully functional open-source debugging tool for Android, surpassing existing
-              commercial options in efficiency, automation, and usability.
-            </li>
-          </ul>
         </>
       ),
     },
