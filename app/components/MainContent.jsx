@@ -12,48 +12,38 @@ const MainContent = () => {
   const phases = [
     {
       title: "Phase 1: Registration",
-      description: "Call for participation through portal.",
+      description:
+        "Call for participation through the portal. Teams register and submit their ideas.",
     },
     {
-      title: "Phase 2: Evaluation 1",
+      title: "Phase 2: Evaluation",
       description:
-        "Presentation for Shortlisting top 40-50 teams based on innovation and feasibility of solutions. (Online)",
+        "Single evaluation round to assess innovation, feasibility, and clarity of submitted ideas. Shortlisted teams announced on 5th March. (Online)",
     },
     {
-      title: "Phase 3: Prototype Development Evaluation 2",
+      title: "Phase 3: Hackathon & Prototype Development",
       description:
-        "Teams develop prototypes with mentorship support. Mid-term evaluation shortlists top 20-30 teams. (Online) (Presentations and DEMO)",
+        "Shortlisted teams participate in the hackathon from 10th to 11th March and develop their working prototypes with available mentorship support.",
     },
     {
-      title: "Phase 4: Final Evaluation & Presentation",
+      title: "Phase 4: Final Presentation & Awards",
       description:
-        "Finalists present working solutions before a panel of judges, which undergoes continuous evaluation. Winners are selected. (NIT Hamirpur) (20-30 Teams)",
+        "Teams present their final working solutions before the judging panel at NIT Hamirpur. Winners are selected and awarded on 11th March.",
     },
   ];
 
   const timeline = [
-    { event: "Grand Challenge Launch", date: "15th January 2026" },
+    { event: "Grand Challenge Launch", date: "31st January 2026" },
+    { event: "Registration Window Opens", date: "31st January 2026" },
     {
-      event: "Last Date for Registration of Team and submission of idea",
+      event: "Last Date for Registration & Idea Submission",
       date: "15th February 2026",
     },
-    { event: "First Round of Evaluation", date: "February 2026" },
-    {
-      event: "Last date for Submission after the First Round of Evaluation",
-      date: "Late February 2026",
-    },
-    {
-      event: "Second Round of Evaluation (Demo/PoC)",
-      date: "Early March 2026",
-    },
-    {
-      event:
-        "Last Date of Submission of Final Product (After Second Evaluation)",
-      date: "10th March 2026",
-    },
-    { event: "Result for Grand Finale Teams", date: "12th March 2026" },
-    { event: "Grand Finale", date: "14-15 March 2026" },
-    { event: "Awards Ceremony", date: "15th March 2026" },
+    { event: "Evaluation Round", date: "15th February 2026" },
+    { event: "Announcement of Shortlisted Teams", date: "5th March 2026" },
+    { event: "Hackathon Starts", date: "10th March 2026" },
+    { event: "Project Submission Deadline", date: "11th March 2026" },
+    { event: "Awards Ceremony / Event Close", date: "11th March 2026" },
   ];
 
   return (
@@ -123,8 +113,8 @@ const MainContent = () => {
 
         <div className="space-y-4 text-sm md:text-base lg:text-lg text-[#33110E]">
           <p>
-            The hackathon will be conducted over a period of 4 months with three
-            rounds of evaluation.
+            The hackathon will be conducted over a short timeline with a single
+            round of evaluation followed by the main event.
           </p>
 
           <ul className="space-y-3 md:space-y-4">

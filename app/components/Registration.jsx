@@ -1,27 +1,31 @@
+"use client";
+import { useEffect } from "react";
+
 const Registration = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://apply.devfolio.co/v2/sdk.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <div className="container mx-auto px-4 py-6 md:py-8 lg:py-12">
       <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {/* Main Content - Takes 2/3 width on desktop */}
-        <main className="lg:w-2/3">
+        <main className="lg:w-2/3 pt-18 md:pt-10">
           {/* Registration Buttons Card */}
-          <div className="mb-6 md:mb-8 space-y-4">
-            {/* Google Form Registration */}
 
-            {/* Devfolio Registration */}
-            <a
-              href="https://devfolio.co"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-gradient-to-r from-[#3770FF] to-[#2557D6] hover:from-[#2557D6] hover:to-[#1A4AAF] transition-all rounded-lg p-6 md:p-8 text-center shadow-lg group border-2 border-[#3770FF]"
-            >
-              <div className="relative flex items-center justify-center gap-3">
-                <h3 className="text-white text-lg md:text-xl font-semibold group-hover:scale-105 transition-transform">
-                  Register via Devfolio
-                </h3>
-              </div>
-            </a>
-          </div>
+          {/* Devfolio Registration */}
+          <div
+            className="apply-button"
+            data-hackathon-slug="hacksecure-1461"
+            data-button-theme="light"
+            style={{ height: "44px", width: "312px" }}
+          ></div>
 
           {/* Registration Guidelines */}
           <div className="space-y-4 md:space-y-6 text-[#33110E]">
@@ -44,7 +48,7 @@ const Registration = () => {
                 </li>
                 <li>
                   Participants can register <strong>individually</strong> or in{" "}
-                  <strong>teams (2-5 members).</strong>
+                  <strong>teams (2-4 members).</strong>
                 </li>
                 <li>
                   Participants must be <strong>18 years or older</strong> (or
@@ -64,12 +68,12 @@ const Registration = () => {
               </p>
               <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-sm md:text-base">
                 <li>
-                  Complete the <strong>registration form</strong> with the
-                  registration link.
+                  Click on the <strong>“Register with Devfolio”</strong> button
+                  to begin your registration.
                 </li>
                 <li>
-                  Provide <strong>accurate details</strong> (name, email,
-                  affiliation).
+                  Fill out the <strong>registration form</strong> on Devfolio
+                  with accurate details (name, email, affiliation).
                 </li>
               </ul>
             </div>
@@ -134,10 +138,10 @@ const Registration = () => {
                 Contact:
                 <br />
                 <a
-                  href="mailto:hackathon@nith.ac.in"
+                  href="mailto:hack@nith.ac.in"
                   className="hover:text-[#E8A87C] transition-colors"
                 >
-                  hackathon@nith.ac.in
+                  hack@nith.ac.in
                 </a>
               </p>
             </div>

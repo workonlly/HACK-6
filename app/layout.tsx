@@ -35,6 +35,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
       </body>
     </html>
   );
